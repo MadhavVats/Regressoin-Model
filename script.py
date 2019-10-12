@@ -1,7 +1,7 @@
 import numpy
 import csv
 import random
-
+import math
 def getInput(a,b):
 	"""
 		Input: Name of file to read from and the array.
@@ -86,6 +86,7 @@ def getAnswer(variablesToconsider,finalData):
 	y_calculated=numpy.matmul(xi,b)
 	errorMean=0
 	errorRMS=0
+	errorRRMS=-1
 	for i in range(len(yi)):
 		errorMean+=abs(yi[i]-y_calculated[i])
 		errorRMS+=abs(yi[i]-y_calculated[i])**2
